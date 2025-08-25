@@ -32,7 +32,12 @@ public class BanController {
     @GetMapping("delete/{id}")
     public ResponseObject<?> delete(@PathVariable("id")Long id){
         banService.delete(id);
-        return new ResponseObject<>(null,"Xoa thanh cong");
+        return new ResponseObject<>(null,"Xoa thanh cong bay oi!");
+    }
+    @GetMapping("delete/{ma}")
+    public ResponseObject<?> deleteByMa(@PathVariable("ma")String ma){
+        banService.deleteByMa(ma);
+        return new ResponseObject<>(null,"Xoa thanh cong!");
     }
 
     @PostMapping("add")
