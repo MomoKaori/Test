@@ -56,4 +56,7 @@ public class BanService {
      public void delete(Long id){
         banRepository.deleteById(id);
      }
+     public void deleteByMa(String ma){
+        banRepository.deleteByMa(ma);
+     }
 }
