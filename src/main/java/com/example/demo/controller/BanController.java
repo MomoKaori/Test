@@ -34,6 +34,11 @@ public class BanController {
         banService.delete(id);
         return new ResponseObject<>(null,"Xoa thanh cong");
     }
+    @GetMapping("delete/{ma}")
+    public ResponseObject<?> deleteByMa(@PathVariable("ma")String ma){
+        banService.deleteByMa(ma);
+        return new ResponseObject<>(null,"Xoa thanh cong");
+    }
 
     @PostMapping("add")
     public ResponseObject<?> add(@Valid @RequestBody BanRequest banRequest){
